@@ -1,0 +1,10 @@
+{
+  "eventId": "default",
+  "modules": {
+    "registration": true,
+    "agenda": true,
+    "chat": true,
+    "polling": false
+  },
+  "overrides": {}
+}
