@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 const configPath = path.join(__dirname, "defaultConfig.json");
 
 // 🔹 GET - returns the default JSON config for any event
-app.get("/settings/:eventId", (req, res) => {
+app.get("/api/settings/:eventId", (req, res) => {
   try {
     const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
     res.json(config);
@@ -26,7 +26,7 @@ app.get("/settings/:eventId", (req, res) => {
 });
 
 // 🔹 POST - update and save JSON
-app.post("/settings/:eventId", (req, res) => {
+app.post("/api/settings/:eventId", (req, res) => {
   try {
     fs.writeFileSync(configPath, JSON.stringify(req.body, null, 2));
     res.json(req.body);

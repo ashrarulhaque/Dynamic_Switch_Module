@@ -20,7 +20,7 @@ export default function App() {
   const [settings, setSettings] = useState(null);
 
   const loadSettings = () => {
-    fetch(`/settings/${eventId}`)
+    fetch(`/api/settings/${eventId}`)
       .then((res) => res.json())
       .then((data) => setSettings(data));
   };

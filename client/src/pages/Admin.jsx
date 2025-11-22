@@ -28,7 +28,7 @@ export default function Admin({ onSettingsUpdated }) {
 
   const saveSettings = () => {
     setSaving(true);
-    fetch(`/settings/${eventId}`, {
+    fetch(`/api/settings/${eventId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(settings),
